@@ -68,6 +68,7 @@ ng serve --open
 ```
 ng add @angular/material
 ```
+
 - //TODO: What folders, files do i need to add and/or modify?
 
 
@@ -80,16 +81,17 @@ ng add @angular/material
 - User Delete
 - User Index
 
-## Step X: Add Amplify SDK
+## Step X: Add Amplify
 - Install SDK
 ```
 npm i aws-amplify-angular
 ```
-- Add /aws-exports.ts
+
+- Add ~/angular-tour-of-heroes/aws-exports.ts
 ```
-const awsmobile = {
     "aws_project_region": "ap-southeast-1",
-    "ap-southeast-1:f71d7e8f-8235-41e4-9bca-8fe6c00eb5e4",
+    "aws_cognito_identity_pool_id": "ap-southeast-1:f71d7e8f-8235-41e4-9bca-8fe6c00eb5e4",
+    "aws_cognito_region": "ap-southeast-1",
     "aws_user_pools_id": "ap-southeast-1_pfV9SAIvf",
     "aws_user_pools_web_client_id": "23t9cniohmsk313lpogmv6v33b",
     "oauth": {
@@ -105,9 +107,21 @@ const awsmobile = {
         "redirectSignOut": "http://localhost:4200/auth/signin/",
         "responseType": "code"
     },
-    "federationTarget": "COGNITO_USER_POOLS"
-};
-export default awsmobile;
+    "federationTarget": "COGNITO_USER_POOLS",
+    "aws_user_files_s3_bucket": "angularpwapostone283fb76bded24ac2b6110d4234facb214913-dev",
+    "aws_user_files_s3_bucket_region": "ap-southeast-1"
+```
+
+- Modify  ~/angular-tour-of-heroes/src/main.ts
+```
+...
+import AWSConfig from '../aws-exports';
+import Auth from '@aws-amplify/auth';
+import Storage from '@aws-amplify/storage';
+
+Auth.configure(AWSConfig);
+Storage.configure(AWSConfig);
+...
 ```
 
 ## Step X: Add Authentication Components
