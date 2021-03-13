@@ -84,7 +84,6 @@ ng add @angular/material
 - Install SDK
 ```
 npm install --save aws-amplify @aws-amplify/ui-angular
-npm start
 ```
 
 - Add ~/angular-tour-of-heroes/aws-exports.ts
