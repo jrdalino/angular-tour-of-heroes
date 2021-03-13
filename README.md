@@ -71,7 +71,6 @@ ng add @angular/material
 
 - //TODO: What folders, files do i need to add and/or modify?
 
-
 ## Step X: Add Navigation & Routing
 - Dashboard
 - Add Collapsible Menu
@@ -112,7 +111,7 @@ npm i aws-amplify-angular
     "aws_user_files_s3_bucket_region": "ap-southeast-1"
 ```
 
-- Modify  ~/angular-tour-of-heroes/src/main.ts
+- Modify ~/angular-tour-of-heroes/src/main.ts
 ```
 ...
 import AWSConfig from '../aws-exports';
