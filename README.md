@@ -74,16 +74,17 @@ ng add @angular/material
 ## Step X: Add Navigation & Routing
 - Dashboard
 - Add Collapsible Menu
-- User Create
-- User Read
-- User Update
-- User Delete
-- User Index
+- Hero Create
+- Hero Read
+- Hero Update
+- Hero Delete
+- Hero Index
 
 ## Step X: Add Amplify
 - Install SDK
 ```
-npm i aws-amplify-angular
+npm install --save aws-amplify @aws-amplify/ui-angular
+npm start
 ```
 
 - Add ~/angular-tour-of-heroes/aws-exports.ts
@@ -123,12 +124,19 @@ Storage.configure(AWSConfig);
 ...
 ```
 
+- Modify ~/angular-tour-of-heroes/src/app/app.module.ts
+```
+/* import AmplifyUIAngularModule  */
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+```
+
+
 ## Step X: Add Authentication Components
 - Landing
 - Sign Up
 - Sign In
 - Dashboard
 
-## Step X: Add User Component
+## Step X: Add Hero Component
 
-## Step X: Add User Service
+## Step X: Add Hero Service
