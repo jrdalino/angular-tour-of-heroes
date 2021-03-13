@@ -1,6 +1,9 @@
 # AngularTourOfHeroes
 
 ## Step 1: Set up your environemnt
+```
+npm install -g @angular/cli
+```
 
 ## Step 2: Create workspace and initial app project
 ```
@@ -40,31 +43,49 @@ ng new angular-tour-of-heroes
 └── tslint.json                      ## IGNORE FOR NOW
 ```
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
+## Step 3: Run Unit & E2E Tests
+- Execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+ng test
+```
 
-## Development server
+- Execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+ng e2e
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Step 4: Build & Serve the application
+- The build artifacts will be stored in the `dist/
+- Application will be served at http://localhost:4200/
+```
+cd angular-tour-of-heroes
+ng build
+ng serve --open
+```
 
-## Code scaffolding
+## Step X: Add Angular Material
+- Check out https://material.angular.io/guide/getting-started
+```
+ng add @angular/material
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Step X: Add Navigation & Routing
+- Dashboard
+- Add Collapsible Menu
+- User Create
+- User Read
+- User Update
+- User Delete
+- User Index
 
-## Build
+## Step X: Add Amplify CLI
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Step X: Add Authentication
+- Landing
+- Sign Up
+- Sign In
+- Dashboard
 
-## Running unit tests
+## Step X: Add Component
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-
-
-## Add Angular Material
-
-Run `ng add @angular/material`. Check out https://material.angular.io/guide/getting-started
-
+## Step X: Add Service
