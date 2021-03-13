@@ -130,7 +130,6 @@ Storage.configure(AWSConfig);
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 ```
 
-
 ## Step X: Add Authentication Components
 - Landing
 - Sign Up
