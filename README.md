@@ -1,14 +1,16 @@
 # AngularTourOfHeroes
 
-## Step 1: Set up your environemnt
+## Step 1: Use the Angular CLI to bootstrap a new Angular app
 ```
 npm install -g @angular/cli
 ```
 
-## Step 2: Create workspace and initial app project
+## Step 2: Create a new Angular app
+- Use the Angular CLI to create a new app
 ```
 ng new angular-tour-of-heroes
 ```
+
 - This creates the following directory
 ```
 ~/environment/angular-tour-of-heroes
@@ -43,6 +45,14 @@ ng new angular-tour-of-heroes
 └── tslint.json                      ## IGNORE FOR NOW
 ```
 
+- Modify ~/angular-tour-of-heroes/src/polyfills.ts for Angular 6+ Support
+```
+(window as any).global = window;
+(window as any).process = {
+  env: { DEBUG: undefined },
+};
+```
+
 ## Step 3: Run Unit & E2E Tests
 - Execute the unit tests via [Karma](https://karma-runner.github.io).
 ```
@@ -59,44 +69,18 @@ ng e2e
 - Application will be served at http://localhost:4200/
 ```
 cd angular-tour-of-heroes
-ng build
-ng serve --open
+ng build OR npm run-script build
+ng serve --open OR nom start
 ```
 
-## Step X: Add Angular Material
-- Check out https://material.angular.io/guide/getting-started
-```
-ng add @angular/material
-```
-
-- //TODO: What folders, files do i need to add and/or modify?
-
-## Step X: Add Navigation & Routing
-
-- //TODO
-- Dashboard
-- Add Collapsible Menu
-- Hero Create
-- Hero Read
-- Hero Update
-- Hero Delete
-- Hero Index
-
-## Step X: Add Amplify
-- Modify ~/angular-tour-of-heroes/src/polyfills.ts
-```
-(window as any).global = window;
-(window as any).process = {
-  env: { DEBUG: undefined },
-};
-```
-
-- Install SDK
+## Step 5: Add Amplify Backend
+- Install Amplify Libraries
 ```
 npm install --save aws-amplify @aws-amplify/ui-angular
+npm start
 ```
 
-- Add ~/angular-tour-of-heroes/aws-exports.ts
+- Add ~/angular-tour-of-heroes/src/aws-exports.ts
 ```
     "aws_project_region": "ap-southeast-1",
     "aws_cognito_identity_pool_id": "ap-southeast-1:f71d7e8f-8235-41e4-9bca-8fe6c00eb5e4",
@@ -158,6 +142,25 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
+
+
+
+
+
+
+## Step X: Add Navigation & Routing
+
+- //TODO
+- Dashboard
+- Add Collapsible Menu
+- Hero Create
+- Hero Read
+- Hero Update
+- Hero Delete
+- Hero Index
+
+
+
 ## Step X: Add Authentication Components
 - Landing
 - Sign Up
@@ -167,3 +170,11 @@ export class AppModule { }
 ## Step X: Add Hero Component
 
 ## Step X: Add Hero Service
+
+## Step X: Add Angular Material
+- Check out https://material.angular.io/guide/getting-started
+```
+ng add @angular/material
+```
+
+- //TODO: What folders, files do i need to add and/or modify?
