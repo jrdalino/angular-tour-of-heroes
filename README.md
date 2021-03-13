@@ -68,6 +68,8 @@ ng serve --open
 ```
 ng add @angular/material
 ```
+- //TODO: What folders, files do i need to add and/or modify?
+
 
 ## Step X: Add Navigation & Routing
 - Dashboard
@@ -78,14 +80,43 @@ ng add @angular/material
 - User Delete
 - User Index
 
-## Step X: Add Amplify CLI
+## Step X: Add Amplify SDK
+- Install SDK
+```
+npm i aws-amplify-angular
+```
+- Add /src/aws-exports.js
+```
+const awsmobile = {
+    "aws_project_region": "ap-southeast-1"
+};
+export default awsmobile;
+```
+- Add to App.js
+```
+import "@aws-amplify/ui/dist/style.css";
+import Amplify from "aws-amplify";
 
-## Step X: Add Authentication
+...
+
+Amplify.configure({
+  Auth: {
+    // REQUIRED - Amazon Cognito Region
+    region: "ap-southeast-1",
+    // OPTIONAL - Amazon Cognito User Pool ID
+    userPoolId: "ap-southeast-1_h8uySkLau",
+    // OPTIONAL - Amazon Cognito Web Client ID (26-char alphanumeric string)
+    userPoolWebClientId: "49ovvspjgkn90a18mojc7m4hfh"
+  }
+});
+```
+
+## Step X: Add Authentication Components
 - Landing
 - Sign Up
 - Sign In
 - Dashboard
 
-## Step X: Add Component
+## Step X: Add User Component
 
-## Step X: Add Service
+## Step X: Add User Service
