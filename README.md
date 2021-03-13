@@ -72,6 +72,8 @@ ng add @angular/material
 - //TODO: What folders, files do i need to add and/or modify?
 
 ## Step X: Add Navigation & Routing
+
+- //TODO
 - Dashboard
 - Add Collapsible Menu
 - Hero Create
@@ -81,6 +83,14 @@ ng add @angular/material
 - Hero Index
 
 ## Step X: Add Amplify
+- Modify ~/angular-tour-of-heroes/src/polyfills.ts
+```
+(window as any).global = window;
+(window as any).process = {
+  env: { DEBUG: undefined },
+};
+```
+
 - Install SDK
 ```
 npm install --save aws-amplify @aws-amplify/ui-angular
@@ -123,7 +133,7 @@ Storage.configure(AWSConfig);
 ...
 ```
 
-- Modify ~/angular-tour-of-heroes/src/app/app.module.ts
+- Add the Amplify Angular UI Module to ~/angular-tour-of-heroes/src/app/app.module.ts
 ```
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';

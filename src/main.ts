@@ -4,12 +4,15 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
-import AWSConfig from './aws-exports';
-import Auth from '@aws-amplify/auth';
-// import Storage from '@aws-amplify/storage';
+import Amplify from 'aws-amplify';
+import aws_exports from './aws-exports';
 
-Auth.configure(AWSConfig);
-//Storage.configure(AWSConfig);
+import Auth from '@aws-amplify/auth';
+import Storage from '@aws-amplify/storage';
+
+Amplify.configure(aws_exports);
+Auth.configure(aws_exports);
+Storage.configure(aws_exports);
 
 if (environment.production) {
   enableProdMode();
