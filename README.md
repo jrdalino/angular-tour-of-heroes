@@ -85,30 +85,29 @@ ng add @angular/material
 ```
 npm i aws-amplify-angular
 ```
-- Add /src/aws-exports.js
+- Add /aws-exports.ts
 ```
 const awsmobile = {
-    "aws_project_region": "ap-southeast-1"
+    "aws_project_region": "ap-southeast-1",
+    "ap-southeast-1:f71d7e8f-8235-41e4-9bca-8fe6c00eb5e4",
+    "aws_user_pools_id": "ap-southeast-1_pfV9SAIvf",
+    "aws_user_pools_web_client_id": "23t9cniohmsk313lpogmv6v33b",
+    "oauth": {
+        "domain": "materialpwa-dev.auth.ap-southeast-1.amazoncognito.com",
+        "scope": [
+            "phone",
+            "email",
+            "openid",
+            "profile",
+            "aws.cognito.signin.user.admin"
+        ],
+        "redirectSignIn": "http://localhost:4200/auth/",
+        "redirectSignOut": "http://localhost:4200/auth/signin/",
+        "responseType": "code"
+    },
+    "federationTarget": "COGNITO_USER_POOLS"
 };
 export default awsmobile;
-```
-- Add to App.js
-```
-import "@aws-amplify/ui/dist/style.css";
-import Amplify from "aws-amplify";
-
-...
-
-Amplify.configure({
-  Auth: {
-    // REQUIRED - Amazon Cognito Region
-    region: "ap-southeast-1",
-    // OPTIONAL - Amazon Cognito User Pool ID
-    userPoolId: "ap-southeast-1_h8uySkLau",
-    // OPTIONAL - Amazon Cognito Web Client ID (26-char alphanumeric string)
-    userPoolWebClientId: "49ovvspjgkn90a18mojc7m4hfh"
-  }
-});
 ```
 
 ## Step X: Add Authentication Components
