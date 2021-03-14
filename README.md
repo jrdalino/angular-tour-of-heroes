@@ -167,11 +167,53 @@ Amplify.configure(aws_exports);
 }
 ```
 
-## Step 7: Add Angular Material // TODO
-- Check out https://material.angular.io/guide/getting-started
+## Step 7: Add Angular Material Components // TODO
+- Install https://material.angular.io/guide/getting-started
 ```
 ng add @angular/material
 ```
+
+- Display Tool Bar Component https://material.angular.io/components/toolbar/examples. Import Module that you want to display by adding the following lines to your app.module.ts file.
+```
+import {Component} from '@angular/core';
+
+/**
+ * @title Toolbar overview
+ */
+@Component({
+  selector: 'toolbar-overview-example',
+  templateUrl: 'toolbar-overview-example.html',
+  styleUrls: ['toolbar-overview-example.css'],
+})
+export class ToolbarOverviewExample {}
+```
+
+- Add to app.component.css
+```
+.example-spacer {
+  flex: 1 1 auto;
+}
+```
+
+- Add the <mat-toolbar> tag to the app.component.html like so:
+```
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+```
+
 
 ## Step 8: Add Navigation & Routing //TODO
 - Dashboard
@@ -181,7 +223,6 @@ ng add @angular/material
 - Hero Update
 - Hero Delete
 - Hero Index
-
 
 ## Step 9: Add Hero Service //TODO
 
