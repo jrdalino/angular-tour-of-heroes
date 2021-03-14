@@ -6,13 +6,7 @@ import { environment } from './environments/environment';
 
 import Amplify from 'aws-amplify';
 import aws_exports from './aws-exports';
-
-import Auth from '@aws-amplify/auth';
-import Storage from '@aws-amplify/storage';
-
 Amplify.configure(aws_exports);
-Auth.configure(aws_exports);
-Storage.configure(aws_exports);
 
 if (environment.production) {
   enableProdMode();
