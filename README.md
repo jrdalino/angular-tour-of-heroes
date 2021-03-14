@@ -216,8 +216,10 @@ export class ToolbarOverviewExample {}
 
 
 ## Step 8: Add Navigation & Routing //TODO
+- Landing Page
+- Sign Up
+- Sign In
 - Dashboard
-- Add Collapsible Menu
 - Hero Create
 - Hero Read
 - Hero Update
