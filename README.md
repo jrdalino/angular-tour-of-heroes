@@ -167,10 +167,25 @@ Amplify.configure(aws_exports);
 }
 ```
 
-## Step 7: Add Hero Service
-//TODO
+## Step 7: Add Angular Material // TODO
+- Check out https://material.angular.io/guide/getting-started
+```
+ng add @angular/material
+```
 
-## Step 8: Add Hero Components 
+## Step 8: Add Navigation & Routing //TODO
+- Dashboard
+- Add Collapsible Menu
+- Hero Create
+- Hero Read
+- Hero Update
+- Hero Delete
+- Hero Index
+
+
+## Step 9: Add Hero Service //TODO
+
+## Step 10: Add Hero Components 
 - Add /src/types/hero.ts
 ```
 export type Helo = {
@@ -329,27 +344,7 @@ async ngOnInit() {
 }
 ```
 
-## Step X: Add Authentication Components
-- Landing
+## Step 11: Add Authentication Components //TODO
 - Sign Up
 - Sign In
-- Dashboard
-
-## Step X: Add Navigation & Routing
-
-- //TODO
-- Dashboard
-- Add Collapsible Menu
-- Hero Create
-- Hero Read
-- Hero Update
-- Hero Delete
-- Hero Index
-
-## Step X: Add Angular Material
-- Check out https://material.angular.io/guide/getting-started
-```
-ng add @angular/material
-```
-
-- //TODO: What folders, files do i need to add and/or modify?
+- Sign Out
