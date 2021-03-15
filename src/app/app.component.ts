@@ -23,13 +23,13 @@ export class AppComponent { // implements OnInit
   //   });
   // }
 
-  // public onCreate(restaurant: Restaurant) {
-  //   this.api.CreateRestaurant(restaurant).then(event => {
+  // public onCreate(hero: Hero) {
+  //   this.api.CreateHero(hero).then(event => {
   //     console.log('item created!');
   //     this.createForm.reset();
   //   })
   //   .catch(e => {
-  //     console.log('error creating restaurant...', e);
+  //     console.log('error creating hero...', e);
   //   });
   // }
 

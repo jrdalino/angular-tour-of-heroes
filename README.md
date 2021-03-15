@@ -226,12 +226,22 @@ export class ToolbarOverviewExample {}
 - Hero Delete
 - Hero Index
 
-## Step 9: Add Hero Service //TODO
+## Step 9: Add Hero Components
+- Create the heroes component
+```
+ng generate component heroes
+```
+```
+CREATE src/app/heroes/heroes.component.css (0 bytes)
+CREATE src/app/heroes/heroes.component.html (21 bytes)
+CREATE src/app/heroes/heroes.component.spec.ts (626 bytes)
+CREATE src/app/heroes/heroes.component.ts (275 bytes)
+UPDATE src/app/app.module.ts (755 bytes)
+```
 
-## Step 10: Add Hero Components 
 - Add /src/types/hero.ts
 ```
-export type Helo = {
+export type Hero = {
   id : string,
   name : string
 };
@@ -386,6 +396,8 @@ async ngOnInit() {
   });
 }
 ```
+
+## Step 10: Add Hero Service //TODO
 
 ## Step 11: Add Authentication Components //TODO
 - Sign Up
