@@ -239,6 +239,18 @@ CREATE src/app/heroes/heroes.component.ts (275 bytes)
 UPDATE src/app/app.module.ts (755 bytes)
 ```
 
+- Create HeroDetailComponent
+```
+ng generate component hero-detail
+```
+```
+CREATE src/app/hero-detail/hero-detail.component.css (0 bytes)
+CREATE src/app/hero-detail/hero-detail.component.html (26 bytes)
+CREATE src/app/hero-detail/hero-detail.component.spec.ts (655 bytes)
+CREATE src/app/hero-detail/hero-detail.component.ts (294 bytes)
+UPDATE src/app/app.module.ts (922 bytes)
+```
+
 - Add /src/types/hero.ts
 ```
 export type Hero = {

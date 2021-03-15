@@ -4,25 +4,21 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
-
-// import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { AppRoutingModule } from './app-routing.module';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    // AppRoutingModule,    
-    AmplifyUIAngularModule,
-    /* configuring form modules */
-    // FormsModule,
-    // ReactiveFormsModule
+    FormsModule, 
+    AmplifyUIAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]
